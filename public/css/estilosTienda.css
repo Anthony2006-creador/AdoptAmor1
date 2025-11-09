@@ -1,0 +1,83 @@
+.tienda-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+.producto-card {
+    background-color: var(--color-surface);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.producto-imagen {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--color-bg);
+    /* Como la imagen es una URL, si falla, se verá el color de fondo */
+}
+.producto-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.producto-nombre {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin-bottom: 10px;
+}
+.producto-descripcion {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+.producto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+.producto-stock {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background-color: var(--color-bg);
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+.btn-comprar-producto {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+.btn-comprar-producto i {
+    margin-right: 8px;
+}
+.btn-comprar-producto:hover {
+    opacity: 0.85;
+}
